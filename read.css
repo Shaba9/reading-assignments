@@ -1,0 +1,44 @@
+body {
+    width: 85%;
+    padding: 2%;
+}
+
+img {
+    position: fixed;
+    z-index: 0;
+}
+
+div {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: orangered;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.time {
+    border: 3px solid blue;
+    width: 30%;
+    padding: 1%;
+    float: right;
+    text-align: center;
+}
+
+.history {
+    width: 40%;
+    float: left;
+}
+
+.other {
+    float: right;
+    width: 40%;
+}
+
+.chapter {
+    clear: both;
+}
