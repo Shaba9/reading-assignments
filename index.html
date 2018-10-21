@@ -16,14 +16,14 @@
         </div>
         
         <div class="history">
-            <h3>A Brief History of Time:</h3>
+            <h3><cite>A Brief History of Time</cite>:</h3>
             
             <p>
                 From the Big Bang to Black Holes is a popular-science book on cosmology (the study of the universe) by British physicist Stephen Hawking.[1] It was first published in 1988. Hawking wrote the book for nonspecialist readers with no prior knowledge of scientific theories.
             </p>
     
             <p>
-                In A Brief History of Time, Hawking writes in non-technical terms about the structure, origin, development and eventual fate of the universe, which is the object of study of astronomy and modern physics. He talks about basic concepts like space and time, basic building blocks that make up the universe (such as quarks) and the fundamental forces that govern it (such as gravity). He writes about cosmological phenomena such as the Big Bang and black holes. He discusses two major theories, general relativity and quantum mechanics, that modern scientists use to describe the universe. Finally, he talks about the search for a unifying theory that describes everything in the universe in a coherent manner.
+                In <cite>A Brief History</cite> of Time, Hawking writes in non-technical terms about the structure, origin, development and eventual fate of the universe, which is the object of study of astronomy and modern physics. He talks about basic concepts like space and time, basic building blocks that make up the universe (such as quarks) and the fundamental forces that govern it (such as gravity). He writes about cosmological phenomena such as the Big Bang and black holes. He discusses two major theories, general relativity and quantum mechanics, that modern scientists use to describe the universe. Finally, he talks about the search for a unifying theory that describes everything in the universe in a coherent manner.
             </p>
     
             <p>
@@ -35,11 +35,11 @@
             
             <h3>Some Other Info:</h3>
             <p>
-                    Early in 1983, Hawking first approached Simon Mitton, the editor in charge of astronomy books at Cambridge University Press, with his ideas for a popular book on cosmology. Mitton was doubtful about all the equations in the draft manuscript, which he felt would put off the buyers in airport bookshops that Hawking wished to reach. With some difficulty, he persuaded Hawking to drop all but one equation.[4] The author himself notes in the book's acknowledgements that he was warned that for every equation in the book, the readership would be halved, hence it includes only a single equation: E = mc2. The book does employ a number of complex models, diagrams, and other illustrations to detail some of the concepts it explores.
+                    Early in 1983, Hawking first approached Simon Mitton, the editor in charge of astronomy books at Cambridge University Press, with his ideas for a popular book on cosmology. Mitton was doubtful about all the equations in the draft manuscript, which he felt would put off the buyers in airport bookshops that Hawking wished to reach. With some difficulty, he persuaded Hawking to drop all but one equation.[4] The author himself notes in the book's acknowledgements that he was warned that for every equation in the book, the readership would be halved, hence it includes only a single equation: E = mc<sup>2</sup>. The book does employ a number of complex models, diagrams, and other illustrations to detail some of the concepts it explores.
                 </p>
                 
             <p>
-                    In A Brief History of Time, Stephen Hawking attempts to explain a range of subjects in cosmology, including the Big Bang, black holes and light cones, to the nonspecialist reader. His main goal is to give an overview of the subject, but he also attempts to explain some complex mathematics. In the 1996 edition of the book and subsequent editions, Hawking discusses the possibility of time travel and wormholes and explores the possibility of having a universe without a quantum singularity at the beginning of time.
+                    In <cite>A Brief History of Time</cite>, Stephen Hawking attempts to explain a range of subjects in cosmology, including the Big Bang, black holes and light cones, to the nonspecialist reader. His main goal is to give an overview of the subject, but he also attempts to explain some complex mathematics. In the 1996 edition of the book and subsequent editions, Hawking discusses the possibility of time travel and wormholes and explores the possibility of having a universe without a quantum singularity at the beginning of time.
                 </p>
             </div>
 
@@ -49,6 +49,25 @@
                 In the first chapter, Hawking discusses the history of astronomical studies, including the ideas of Aristotle and Ptolemy. Aristotle, unlike many other people of his time, thought that the Earth was round. He came to this conclusion by observing lunar eclipses, which he thought were caused by the earth's round shadow, and also by observing an increase in altitude of the North Star from the perspective of observers situated further to the north. Aristotle also thought that the sun and stars went around the Earth in perfect circles, because of "mystical reasons". Second-century Greek astronomer Ptolemy also pondered the positions of the sun and stars in the universe and made a planetary model that described Aristotle's thinking in more detail.
             </p>
         </div>
+
+        <form onsubmit="return SetTime(event), false;">
+            <p>
+                <label>
+                    <strong>Set To:</strong>
+                    <input type="number" name="newHour" min="1" max="12" required="required"> :
+                    <input type="number" name="newMinute" min="0" max="59" required="required"> :
+                    <input type="number" name="newSecond" min="0" max="59" required="required">
+                    <select name="newPeriod">
+                        <option value="AM" required="required">AM</option>
+                        <option value="PM" required="required">PM</option>
+                    </select>
+                </label><br><br>
+            </p>
+
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
         
         <script src="index.js"></script>
     </body>
