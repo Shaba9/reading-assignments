@@ -1,30 +1,39 @@
+var time = '0:00:00';
+var real = true;
+
 function Time() {
   var today = new Date();
   var hour = today.getHours();
   var minute = today.getMinutes();
   var second = today.getSeconds();
   var period = 'AM';
-  var time = '0:00:00';
 
-  if(hour >= 12) {
-    if(hour > 12){
-      hour -= 12;
+  if(real) {
+    DisplayTime(hour, minute, second, period);
+    setTimeout(Time, 1000);
+  };
+}
+
+function DisplayTime(disHour, disMin, disSec, disPeriod) {
+
+  if(disHour >= 12) {
+    if(disHour > 12){
+      disHour -= 12;
     }
-    period = 'PM';
+    disPeriod = 'PM';
   }
    
-  if(minute < 10) {
-     minute = '0' + minute;
+  if(disMin < 10) {
+     disMin = '0' + disMin;
   };
    
-  if(second < 10){
-    second = '0' + second;
+  if(disSec < 10){
+    disSec = '0' + disSec;
   };
    
-  time = hour + ':' + minute + ':' + second + ' ' + period;
+  time = disHour + ':' + disMin + ':' + disSec + ' ' + disPeriod;
    
   document.getElementById('realTime').innerHTML = time;
-  setTimeout(Time, 1000);
 }
 
 Time();
@@ -48,4 +57,6 @@ function SetTime(event){
   newTime = newHour + ':' + newMinute + ':' + newSecond + ' ' + newPeriod;
 
   document.getElementById('realTime').innerHTML = newTime;
+
+  real = false;
 }
