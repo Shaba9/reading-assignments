@@ -1,4 +1,3 @@
-var time = '0:00:00';
 var real = true;
 
 function Time() {
@@ -15,6 +14,7 @@ function Time() {
 }
 
 function DisplayTime(disHour, disMin, disSec, disPeriod) {
+  var time = '0:00:00';
 
   if(disHour >= 12) {
     if(disHour > 12){

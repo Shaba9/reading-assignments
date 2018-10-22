@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Current Time</title>
-        <link rel="stylesheet" type="text/css" href="read.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
         <img src="clock.jpeg" alt="clock">
@@ -13,6 +13,25 @@
         <div class="time">
             <h2>Hello! Currently, the time is:</h2>
             <h1 id="realTime"></h1>
+
+            <form onsubmit="return SetTime(event), false;">
+                <p>
+                    <label>
+                        <strong>Set To:</strong>
+                        <input type="number" name="newHour" min="1" max="12" required="required"> :
+                        <input type="number" name="newMinute" min="0" max="59" required="required"> :
+                        <input type="number" name="newSecond" min="0" max="59" required="required">
+                        <select name="newPeriod">
+                            <option value="AM" required="required">AM</option>
+                            <option value="PM" required="required">PM</option>
+                        </select>
+                    </label><br><br>
+                </p>
+    
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
         </div>
         
         <div class="history">
@@ -50,24 +69,6 @@
             </p>
         </div>
 
-        <form onsubmit="return SetTime(event), false;">
-            <p>
-                <label>
-                    <strong>Set To:</strong>
-                    <input type="number" name="newHour" min="1" max="12" required="required"> :
-                    <input type="number" name="newMinute" min="0" max="59" required="required"> :
-                    <input type="number" name="newSecond" min="0" max="59" required="required">
-                    <select name="newPeriod">
-                        <option value="AM" required="required">AM</option>
-                        <option value="PM" required="required">PM</option>
-                    </select>
-                </label><br><br>
-            </p>
-
-            <p>
-                <input type="submit" value="Submit">
-            </p>
-        </form>
         
         <script src="index.js"></script>
     </body>
