@@ -59,4 +59,6 @@ function SetTime(event){
   document.getElementById('realTime').innerHTML = newTime;
 
   real = false;
+
+  console.log(el);
 }
